@@ -1,20 +1,45 @@
 import React, { Component } from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom'
 
-import './App.css'
-import logo from './logo.svg'
+import Content from './components/Content'
+import Layout from './components/Layout'
+import Navigation from './components/Navigation'
+import NavigationLink from './components/NavigationLink'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 
 export default class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <BrowserRouter>
+        <Layout>
+          <Navigation>
+            <NavigationLink to='/'>
+              Home
+            </NavigationLink>
+            <NavigationLink to='/about'>
+              About
+            </NavigationLink>
+            <NavigationLink to='/contact'>
+              Contact
+            </NavigationLink>
+          </Navigation>
+          <Content>
+            <Switch>
+              <Route component={Home} exact path='/' />
+              <Route component={About} exact path='/about' />
+              <Route component={Contact} exact path='/contact' />
+              <Route component={NotFound} path='*' />
+            </Switch>
+          </Content>
+        </Layout>
+      </BrowserRouter>
     )
   }
 }

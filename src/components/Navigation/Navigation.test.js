@@ -2,10 +2,12 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import React from 'react'
 
-import App from './App'
+import Navigation from './Navigation'
 
 it('renders correctly', () => {
   expect(toJson(shallow(
-    <App />
+    <Navigation>
+      Content
+    </Navigation>
   ))).toMatchSnapshot()
 })

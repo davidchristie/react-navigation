@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<BrowserRouter>
+  <Layout>
+    <Navigation>
+      <NavigationLink
+        to="/"
+      >
+        Home
+      </NavigationLink>
+      <NavigationLink
+        to="/about"
+      >
+        About
+      </NavigationLink>
+      <NavigationLink
+        to="/contact"
+      >
+        Contact
+      </NavigationLink>
+    </Navigation>
+    <Content>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/about"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contact"
+        />
+        <Route
+          component={[Function]}
+          path="*"
+        />
+      </Switch>
+    </Content>
+  </Layout>
+</BrowserRouter>
+`;
