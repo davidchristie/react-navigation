@@ -1,9 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders collapsed state 1`] = `
+<nav
+  className="Navigation collapsed"
+>
+  <NavigationToggle
+    onClick={[Function]}
+  />
+  <ul>
+    Content
+  </ul>
+</nav>
+`;
+
+exports[`renders open state 1`] = `
 <nav
   className="Navigation"
 >
+  <NavigationToggle
+    onClick={[Function]}
+  />
   <ul>
     Content
   </ul>

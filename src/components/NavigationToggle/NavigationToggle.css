@@ -1,0 +1,19 @@
+.NavigationToggle {
+  background: white;
+  border: 2px solid;
+  height: 45px;
+  margin: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50px;
+}
+
+.NavigationToggle hr {
+  border: 1px solid;
+}
+
+@media screen and (min-width: 400px) {
+  .NavigationToggle {
+    display: none;
+  }
+}
