@@ -14,9 +14,9 @@ export default class NavigationToggle extends Component {
         className='NavigationToggle'
         onClick={this.props.onClick}
       >
-        <hr />
-        <hr />
-        <hr />
+        <div />
+        <div />
+        <div />
       </button>
     )
   }
